@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Attendance Management System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Attendance Management System</h1>
+
+        <p>AWS 3-Tier Application</p>
+
+    </header>
+
+
+    <main>
+
+        <section class="card">
+
+            <h2>Add Employee</h2>
+
+            <form id="employeeForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                >
+
+                <button type="submit">
+                    Add Employee
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Mark Attendance</h2>
+
+            <form id="attendanceForm">
+
+                <select
+                    id="employee"
+                    required
+                >
+                    <option value="">
+                        Select Employee
+                    </option>
+                </select>
+
+                <input
+                    type="date"
+                    id="attendanceDate"
+                    required
+                >
+
+                <select
+                    id="status"
+                    required
+                >
+                    <option value="Present">
+                        Present
+                    </option>
+
+                    <option value="Absent">
+                        Absent
+                    </option>
+                </select>
+
+                <button type="submit">
+                    Save Attendance
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Employees</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="employeeTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Attendance</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="attendanceTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
